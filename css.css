@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+container {
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'header header header' 'nav hero hero' 'service service service' 'footer footer footer';
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 10px;
+}
+
+.header {
+    z-index: 10;
+    grid-area: header;
+    background-color: rgb(244, 247, 247);
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 7px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.logo a:hover {
+    cursor: pointer;
+}
+
+.logo span {
+    color: red;
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding-top: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.nav a:hover {
+    font-size: larger;
+}
+
+.sign {
+    display: grid;
+    background-color: rgb(244, 247, 247);
+    justify-items: right;
+    padding-top: 15px;
+    padding-right: 50px;
+}
+
+.sign a {
+    display: block;
+    color: grey;
+    text-decoration: none;
+}
+
+.hero {
+    margin-top: 20px;
+    grid-area: hero;
+    background-color: rgb(244, 247, 247);
+    min-height: 350px;
+    background-image: url(img/aa.png);
+    background-size: 600px 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: lightslategrey;
+    display: grid;
+    border: 5px solid rgb(244, 247, 247);
+    border-radius: 10%;
+    margin-right: 15px;
+}
+
+.tengah {
+    padding: 50px;
+    font-family: 'Anton', sans-serif;
+    grid-area: nav;
+    background-color: rgb(254, 255, 255);
+    display: grid;
+    grid-template-areas: 'h1 h1' 'h2 h2' 'p p' 'a b';
+    justify-content: center;
+    align-content: center
+}
+
+.tengah h1 {
+    font-weight: 300;
+    color: grey;
+}
+
+.satu {
+    grid-area: h1;
+}
+
+.dua {
+    grid-area: h2;
+}
+
+.tengah p {
+    grid-area: p;
+    color: grey;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightsalmon;
+    height: 100px;
+}
+
+.tengah h1 p {
+    text-justify: center;
+}
+
+.tengah a {
+    margin-top: 50px;
+    margin-left: 70px;
+    text-decoration: none;
+    color: gray;
+    display: grid;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.signin {
+    grid-area: a;
+    place-content: center;
+    background-color: honeydew;
+    1
+}
+
+.signup {
+    place-content: center;
+    background-color: honeydew;
+    grid-area: b;
+}
+
+.signin:hover {
+    font-size: larger;
+}
+
+.signup:hover {
+    font-size: larger;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.services {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
+
+.service {
+    padding: 10px;
+    background-color: rgb(244, 247, 247);
+    display: grid;
+    justify-items: center;
+    border: 3px solid rgb(244, 247, 247);
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.service h3 {
+    font-size: 3em;
+}
+
+.service img {
+    height: 100px;
+    width: 100px;
+}
+
+@media (max-width:850px) {
+    .tengah {
+        display: none;
+    }
+}
